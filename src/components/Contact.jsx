@@ -46,7 +46,7 @@ export default function Contact() {
               </div>
               <div>
                 <strong>Visit Us</strong>
-                <span>4-12, Lakshmi Puram, Guntur, Andhra Pradesh 522002</span>
+                <span>Sanakkayala Factory Rd, Ganeshrao Peta, Kothapeta, Guntur, Andhra Pradesh 522001</span>
               </div>
             </div>
             <div className="contact-detail">
@@ -57,7 +57,7 @@ export default function Contact() {
               </div>
               <div>
                 <strong>Call Us</strong>
-                <span>+9198765 43210 · Mon–Sat, 9am–7pm</span>
+                <span> 090591 68211 · Mon–Sat, 9am–7pm</span>
               </div>
             </div>
             <div className="contact-detail">

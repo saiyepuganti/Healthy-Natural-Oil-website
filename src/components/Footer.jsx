@@ -37,8 +37,8 @@ export default function Footer({ onNavClick }) {
               Wood-pressed cooking oils, pure hair &amp; skin care, and A2 desi ghee from the heart of Guntur. Authentic, chemical-free, and traditionally extracted.
             </p>
             <address className="footer-contact">
-              <p>📍 12-4-56, Main Bazar, Guntur, AP, 522001</p>
-              <p>📞 +91 98765 43210</p>
+              <p>📍 Sanakkayala Factory Rd, Ganeshrao Peta, Kothapeta, Guntur, Andhra Pradesh 522001</p>
+              <p>📞  090591 68211</p>
               <p>✉️ support@healthyhomesoils.com</p>
             </address>
           </div>
