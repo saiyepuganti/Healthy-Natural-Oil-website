@@ -193,3 +193,75 @@
   color: var(--neutral-400);
   border: 1px solid var(--neutral-700);
 }
+
+/* Policy Modal */
+.policy-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.policy-modal-content {
+  background: var(--neutral-900);
+  border: 1px solid var(--neutral-800);
+  border-radius: var(--radius-md);
+  padding: 2.5rem;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.policy-close-btn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: none;
+  border: none;
+  color: var(--neutral-400);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.policy-close-btn:hover {
+  background: var(--neutral-800);
+  color: var(--neutral-0);
+}
+
+.policy-modal-title {
+  color: var(--neutral-0);
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-right: 2rem;
+}
+
+.policy-text {
+  color: var(--neutral-300);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.policy-text p {
+  margin-bottom: 1rem;
+}
+
+.policy-text p:last-child {
+  margin-bottom: 0;
+}

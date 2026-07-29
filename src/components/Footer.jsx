@@ -1,6 +1,8 @@
+import { useState } from 'react'
 import './Footer.css'
 
 export default function Footer({ onNavClick }) {
+  const [activePolicy, setActivePolicy] = useState(null)
   const quickLinks = [
     { label: 'Shop All Oils', target: 'products' },
     { label: 'Our Story', target: 'about' },
@@ -9,11 +11,11 @@ export default function Footer({ onNavClick }) {
   ]
 
   const policyLinks = [
-    'Shipping Policy',
-    'Return & Refund',
-    'Privacy Policy',
-    'Terms of Service',
-    'FAQs'
+    { label: 'Shipping Policy', content: 'We offer shipping across Andhra Pradesh and Telangana. Standard delivery takes 3-5 business days. Pure, wood-pressed oils are carefully packaged to prevent any leaks during transit.' },
+    { label: 'Return & Refund', content: 'As we deal with food products, returns are generally not accepted unless the item is damaged or incorrect. If you receive a damaged product, please contact us within 24 hours of delivery for a replacement or refund.' },
+    { label: 'Privacy Policy', content: 'Your privacy is important to us. We only collect essential information required to process your orders and provide a personalized shopping experience. We will never sell your personal data to third parties.' },
+    { label: 'Terms of Service', content: 'By using our website, you agree to our terms. All products are subject to availability. We reserve the right to modify prices and product offerings at our discretion.' },
+    { label: 'FAQs', content: 'Q: What does "wood-pressed" mean?\nA: Wood-pressing is a traditional extraction method using a wooden mortar and pestle at low temperatures, naturally retaining all nutrients and flavors.\n\nQ: Are your oils refined?\nA: No, our oils are 100% pure, unrefined, and chemical-free, ensuring maximum health benefits.\n\nQ: Can I use these oils for skincare?\nA: Absolutely! Our pure coconut and almond oils are excellent for both cooking and natural body care.' }
   ]
 
   return (
@@ -59,9 +61,9 @@ export default function Footer({ onNavClick }) {
           <div className="footer-col">
             <h3>Legal &amp; Support</h3>
             <ul>
-              {policyLinks.map((label) => (
-                <li key={label}>
-                  <a href="#footer">{label}</a>
+              {policyLinks.map((policy) => (
+                <li key={policy.label}>
+                  <button onClick={() => setActivePolicy(policy)} className="policy-link-btn">{policy.label}</button>
                 </li>
               ))}
             </ul>
@@ -96,6 +98,23 @@ export default function Footer({ onNavClick }) {
           </div>
         </div>
       </div>
+
+      {/* Policy Modal */}
+      {activePolicy && (
+        <div className="policy-modal-overlay" onClick={() => setActivePolicy(null)}>
+          <div className="policy-modal-content" onClick={e => e.stopPropagation()}>
+            <button className="policy-close-btn" onClick={() => setActivePolicy(null)} aria-label="Close">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+            <h2 className="policy-modal-title">{activePolicy.label}</h2>
+            <div className="policy-text">
+              {activePolicy.content.split('\n').map((line, idx) => (
+                <p key={idx}>{line}</p>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </footer>
   )
 }
