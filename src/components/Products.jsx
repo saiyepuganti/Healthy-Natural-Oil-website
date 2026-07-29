@@ -45,8 +45,8 @@ export default function Products({ onBuyNow }) {
         <span className="about-eyebrow" style={{ display: 'block', textAlign: 'center' }}>Our Products</span>
         <h2 className="section-title">Explore our natural oils</h2>
         <p className="section-subtitle">
-          Cold-pressed in small batches. Choose from cooking oils, hair &amp;
-          skin oils, and pure desi ghee — each one made without chemicals.
+          Cold-pressed in small batches. Choose from cooking oils and hair &amp;
+          skin oils — each one made without chemicals.
         </p>
 
         <div className="product-filters">

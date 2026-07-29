@@ -11,7 +11,7 @@ const testimonials = [
     name: 'Rajesh Kumar',
     location: 'Vijayawada',
     rating: 5,
-    text: 'Ordered the A2 desi ghee and sesame oil. Quality is top-notch and delivery was quick. The ghee aroma reminded me of my village days.',
+    text: 'Ordered the Flaxseed oil and sesame oil. Quality is top-notch and delivery was quick. The flaxseed oil aroma is wonderful.',
   },
   {
     name: 'Anita Reddy',

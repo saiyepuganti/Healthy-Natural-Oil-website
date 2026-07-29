@@ -36,7 +36,7 @@ export default function Footer({ onNavClick }) {
               </div>
             </div>
             <p className="footer-desc">
-              Wood-pressed cooking oils, pure hair &amp; skin care, and A2 desi ghee from the heart of Guntur. Authentic, chemical-free, and traditionally extracted.
+              Wood-pressed cooking oils and pure hair &amp; skin care from the heart of Guntur. Authentic, chemical-free, and traditionally extracted.
             </p>
             <address className="footer-contact">
               <p>📍 Sanakkayala Factory Rd, Ganeshrao Peta, Kothapeta, Guntur, Andhra Pradesh 522001</p>

@@ -14,8 +14,8 @@ export default function Hero({ onShopNow, onLearnMore }) {
             <span className="hero-accent">Pressed the Traditional Way</span>
           </h1>
           <p className="hero-text">
-            Healthy Homes brings you cold-pressed cooking oils, nourishing hair
-            &amp; skin oils, and pure A2 desi ghee — made without chemicals,
+            Healthy Homes brings you cold-pressed cooking oils and nourishing hair
+            &amp; skin oils — made without chemicals,
             preservatives, or shortcuts. Just honest oil, the way nature
             intended.
           </p>
