@@ -12,6 +12,7 @@ export default function Checkout({ open, onClose, onSuccess }) {
     address: '',
     city: 'Guntur',
     pincode: '',
+    payment_method: 'cod',
   })
   const [status, setStatus] = useState('idle')
   const [error, setError] = useState('')
@@ -121,11 +122,39 @@ export default function Checkout({ open, onClose, onSuccess }) {
                     <input type="text" required value={form.pincode} onChange={update('pincode')} placeholder="522001" maxLength="6" />
                   </label>
                 </div>
+                
+                <div className="checkout-payment-section">
+                  <h3>Payment Method</h3>
+                  <div className="payment-options">
+                    <label className={`payment-method ${form.payment_method === 'upi' ? 'selected' : ''}`}>
+                      <input type="radio" name="payment_method" value="upi" checked={form.payment_method === 'upi'} onChange={update('payment_method')} />
+                      <div className="pm-info">
+                        <strong>UPI</strong>
+                        <span>GPay, PhonePe, Paytm</span>
+                      </div>
+                    </label>
+                    <label className={`payment-method ${form.payment_method === 'card' ? 'selected' : ''}`}>
+                      <input type="radio" name="payment_method" value="card" checked={form.payment_method === 'card'} onChange={update('payment_method')} />
+                      <div className="pm-info">
+                        <strong>Card</strong>
+                        <span>Credit or Debit</span>
+                      </div>
+                    </label>
+                    <label className={`payment-method ${form.payment_method === 'cod' ? 'selected' : ''}`}>
+                      <input type="radio" name="payment_method" value="cod" checked={form.payment_method === 'cod'} onChange={update('payment_method')} />
+                      <div className="pm-info">
+                        <strong>Cash on Delivery</strong>
+                        <span>Pay at your doorstep</span>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+
                 {error && <p className="form-error">{error}</p>}
                 <button type="submit" className="btn btn-primary place-order-btn" disabled={status === 'loading'}>
                   {status === 'loading' ? 'Placing Order…' : `Place Order · ₹${total}`}
                 </button>
-                <p className="form-note">Cash on delivery available. We'll call to confirm before dispatch.</p>
+                <p className="form-note">We'll call to confirm your order details before dispatch.</p>
               </div>
             </form>
           </>
